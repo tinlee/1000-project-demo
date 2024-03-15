@@ -1,0 +1,15 @@
+{
+  "name": "node-excel-import-and-export",
+  "version": "1.0.0",
+  "description": "a demo for excel import and export in nodejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}
