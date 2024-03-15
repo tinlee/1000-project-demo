@@ -1,16 +1,11 @@
-# node-excel-import-and-export
+# 背景
 
-## Description
+我老婆从事 HR 的工作，公司有很多连锁店，她需要将所有的门店的工资汇总计算，然后再拆分给各门店请确认，最后再提供给财务发工资。
 
-My wife is a HR for chain stores,and she has to fill in a lot of payroll excel sheets. She asked me to create a tool that would allow her to import and export excel sheets. This is the result.
+随着门店数量渐渐增多，渐渐的我老婆已经不堪重负，每天加班都做不完，严重影响夫妻感情生活。
 
-## Features
+最终花费了 2 天的时间，完成了整个 node 程序，她只需要传入工资表，相应的各种表格在 10s 内自动输出。目前已正式交付，`得到了每月零花钱提高100元的重大成果`。
 
-- Import payroll for all employees
-- Split the payroll according to the store and calculate the total
-- Export the table of the corresponding store by store
+具体内容参照：
 
-## Tech stack
-
-- Node.js
-- exceljs
+https://mp.weixin.qq.com/s?__biz=MzA5MzkyODc0MA==&mid=2247483785&idx=1&sn=3c8c025cd2c0fdef0f1e3312101d84e1&chksm=90572dc2a720a4d4825cd9edb862d22d30797181a4eb754199b1fb790a01d1b017739065e200#rd
