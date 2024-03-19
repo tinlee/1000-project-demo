@@ -1,47 +1,21 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { ref } from 'vue'
+import StartPage from './components/StartPage.vue'
+import MathPage from './components/MathPage.vue'
+import SuccessPage from './components/SuccessPage.vue'
+
+const pageStatus = ref('success')
+
+function onChangeStatus(status) {
+  pageStatus.value = status
+}
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <StartPage @onChangeStatus="onChangeStatus" v-if="pageStatus === 'start'" />
+  <MathPage @onChangeStatus="onChangeStatus" v-else-if="pageStatus === 'math'" />
+  <SuccessPage @onChangeStatus="onChangeStatus" v-if="pageStatus === 'success'" />
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+<style scoped></style>
