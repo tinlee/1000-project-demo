@@ -8,4 +8,8 @@
 
 具体内容参照：
 
-https://mp.weixin.qq.com/s?__biz=MzA5MzkyODc0MA==&mid=2247483785&idx=1&sn=3c8c025cd2c0fdef0f1e3312101d84e1&chksm=90572dc2a720a4d4825cd9edb862d22d30797181a4eb754199b1fb790a01d1b017739065e200#rd
+https://mp.weixin.qq.com/s?__biz=MzA5MzkyODc0MA==&mid=2247483797&idx=1&sn=2fbb7278454cce677dd90d942aa802dd&chksm=90572ddea720a4c8740568a6c8588a70fd4e2792243d6804474bd3ae51cfefabb37eff99ff33#rd
+
+更多具体内容请查看公众号: cssandjs
+
+![image.jpg](https://github.com/tinlee/1000-project-demo/blob/main/qrcode.jpg)
