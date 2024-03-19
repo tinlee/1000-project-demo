@@ -1,29 +1,7 @@
-# vue3-add-and-subtract-method-within-10
+# 背景
 
-This template should help get you started developing with Vue 3 in Vite.
+我可爱的女儿，现在正在幼儿园中班就读。她已经开始学习 10 以内的加减法了，为了帮助她学习与成长，所以我决定给她写一个练习工具。
 
-## Recommended IDE Setup
+相关具体内容请查看公众号
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+![image.jpg](../qrcode.jpg)
