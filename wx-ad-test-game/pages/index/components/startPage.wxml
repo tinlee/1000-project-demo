@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="bg">
+    <image src="./bg.jpg" />
+  </view>
+  <view class="start" bindtap="onStart">开始检测</view>
+</view>

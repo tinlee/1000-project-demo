@@ -1,0 +1,20 @@
+<view class="title-header">
+  <view class="title">{{ mathFirtNumber }} {{operator }} {{ mathSecondNumber }}</view>
+</view>
+<view class="text">
+  请选择答案
+  <view class="timeDown">
+    {{
+    downTime
+    }}
+  </view>
+</view>
+
+<view class="numberList">
+  <view
+    class="number-button"
+    wx:for="{{numberList}}"
+    data-item="{{item}}"
+    bindtap="onSelect"
+  >{{ item }}</view>
+</view>

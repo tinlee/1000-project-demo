@@ -1,0 +1,7 @@
+<view>
+  <view class="title">请记住以下三样东西</view>
+  <view class="items">
+    <view class="item" wx:for="{{baseItems}}" key="{{item.id}}">{{ item.name }}</view>
+    <view class="start" bindtap="onPlay">马上开始</view>
+  </view>
+</view>

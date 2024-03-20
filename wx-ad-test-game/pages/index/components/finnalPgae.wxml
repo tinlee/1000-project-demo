@@ -1,0 +1,12 @@
+<view>
+  <view class="question">开始时记住的{{ finnal.category }}是什么?</view>
+
+  <view class="answer">
+    <view
+      wx:for="{{finnalItemList}}"
+      bindtap="select"
+      data-id="{{item.id}}"
+      class="item"
+    >{{ item.name }}</view>
+  </view>
+</view>

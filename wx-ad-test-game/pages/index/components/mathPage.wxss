@@ -1,0 +1,53 @@
+.title-header {
+  margin-top: 100px;
+}
+
+.title {
+  line-height: 40px;
+
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.text {
+  font-size: 24px;
+  margin-top: 40px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.numberList {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.number-button {
+  font-size: 24px;
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+
+  background-color: #b3b3b3;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.timeDown {
+  font-size: 28px;
+  text-align: center;
+  line-height: 40px;
+  width: 40px;
+  background-color: #ff1919;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 100px;
+  transition: all 0.3s;
+  margin-left: 30px;
+}

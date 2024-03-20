@@ -1,0 +1,27 @@
+.bg {
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start {
+  width: 60%;
+
+  background-color: rgb(46, 201, 129);
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 0 10px #989898;
+  transition: all 0.3s;
+  margin: 60px auto 20px;
+}

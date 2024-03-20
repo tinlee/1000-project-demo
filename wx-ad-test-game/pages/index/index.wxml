@@ -1,0 +1,19 @@
+<view>
+  <startPage wx:if="{{gameStatus==='start'}}" bind:onChangeState="onChangeState" />
+  <playingPage
+    baseItems="{{baseItems}}"
+    wx:if="{{gameStatus==='playing'}}"
+    bind:onChangeState="onChangeState"
+  />
+  <mathPage wx:if="{{gameStatus==='math'}}" bind:onChangeState="onChangeState" />
+  <finnalPage
+    wx:if="{{gameStatus==='finnal'}}"
+    baseItems="{{baseItems}}"
+    bind:onChangeState="onChangeState"
+  />
+  <statusPage
+    wx:if="{{gameStatus==='success'||gameStatus==='fail'}}"
+    gameStatus="{{gameStatus}}"
+    bind:onChangeState="onChangeState"
+  />
+</view>

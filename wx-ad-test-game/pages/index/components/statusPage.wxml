@@ -1,0 +1,5 @@
+<view wx:if="{{gameStatus === 'success'}}" class="success">你没有得老年痴呆</view>
+<view wx:else class="fail">看来你得了老年痴呆</view>
+<view bindtap="restart" class="restart">重新开始</view>
+<button open-type="share" class="restart share">让朋友测试下</button>
+<button open-type="contact" class="restart contact">我要批评你</button>

@@ -1,0 +1,53 @@
+.success {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 100px;
+  text-align: center;
+  color: green;
+}
+
+.fail {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 100px;
+  text-align: center;
+  color: red;
+}
+
+.restart {
+  font-size: 24px;
+  margin-top: 40px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+  line-height: 40px;
+
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 0 auto;
+  margin-top: 120px;
+  color: #ff1919;
+  background: #fff;
+  border: 1px solid #ff1919;
+}
+
+.share {
+  color: #ff1919;
+  background: #fff;
+  border: 1px solid #ff1919;
+  background-color: #ff1919;
+  color: #fff;
+  margin-top: 40px;
+
+  box-sizing: content-box;
+}
+
+.contact {
+  margin-top: 40px;
+  color: #ff1919;
+  background: #fff;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+}

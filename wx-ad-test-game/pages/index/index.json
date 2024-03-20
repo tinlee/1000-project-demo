@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "老年痴呆测试器",
+  "usingComponents": {
+    "startPage": "./components/startPage",
+    "playingPage": "./components/playingPage",
+    "mathPage": "./components/mathPage",
+    "finnalPage": "./components/finnalPgae",
+    "statusPage": "./components/statusPage"
+  }
+}

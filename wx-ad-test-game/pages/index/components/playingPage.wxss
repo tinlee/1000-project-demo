@@ -1,0 +1,40 @@
+/* pages/index/components/playingPage.wxss */
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  flex-flow: column;
+  align-items: center;
+}
+
+.item {
+  font-size: 24px;
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+  background-color: #b3b3b3;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.start {
+  font-size: 24px;
+  margin-top: 40px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+  background-color: #ff1919;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s;
+}
