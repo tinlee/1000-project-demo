@@ -36,11 +36,13 @@ Component({
         mathSecondNumber = successNumber - mathFirtNumber;
         if (mathSecondNumber < 0) {
           mathSecondNumber = -mathSecondNumber;
+          mathOperator = "-";
         }
       } else if (operator === "-") {
         mathSecondNumber = mathFirtNumber - successNumber;
         if (mathSecondNumber < 0) {
           mathSecondNumber = -mathSecondNumber;
+          mathOperator = "+";
         }
       } else if (operator === "x") {
         mathSecondNumber = Math.floor(Math.random() * 4) + 1;
