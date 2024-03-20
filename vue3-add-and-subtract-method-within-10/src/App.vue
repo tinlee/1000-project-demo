@@ -4,7 +4,7 @@ import StartPage from './components/StartPage.vue'
 import MathPage from './components/MathPage.vue'
 import SuccessPage from './components/SuccessPage.vue'
 
-const pageStatus = ref('success')
+const pageStatus = ref('start')
 
 function onChangeStatus(status) {
   pageStatus.value = status
