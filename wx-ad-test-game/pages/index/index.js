@@ -14,7 +14,7 @@ const shareInof = {
 
 Page({
   data: {
-    gameStatus: "finnal",
+    gameStatus: "start",
     baseItems: [],
   },
   onChangeState(e) {
