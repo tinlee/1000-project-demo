@@ -21,12 +21,18 @@ export default function Home() {
                 <img src={item.avatar_large} />
               </div>
               <div className={styles.userName}>{item.user_name}</div>
+              <div className={styles.job}>
+                {[item.job_title, item.company]
+                  .filter((item) => item)
+                  .join("@")}
+              </div>
             </div>
-            <div className={styles.bradges}>
-              {item.bradges.map((bg, ind) => {
+            <div className={styles.badge}>
+              {item.badges.map((bg, ind) => {
                 return (
-                  <div key={ind} className={styles.bradgesItem}>
-                    <img src={"/bradge/" + bg.icon} />
+                  <div key={ind} className={styles.badgesItem}>
+                    <img src={"/badge/" + bg.icon} />
+                    <span className={styles.badgesName}>{bg.name}</span>
                   </div>
                 );
               })}

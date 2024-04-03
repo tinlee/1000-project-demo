@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import axios, { AxiosResponse } from "axios";
-import articels from "@/database/articel.json";
+import articels from "../../../public/database/articel.json";
 import fs from "fs";
 type Params = {
   team: string;
@@ -37,11 +37,11 @@ export async function GET(request: Request, context: { params: Params }) {
           job_title,
           company,
           avatar_large,
-          bradges: [{ icon, name }],
+          badges: [{ icon, name }],
         };
       } else {
         console.log(user_name, "多次回复");
-        user[user_id].bradges.push({ icon, name });
+        user[user_id].badges.push({ icon, name });
       }
     });
   });
