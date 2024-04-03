@@ -14,6 +14,10 @@ https://github.com/tinlee/1000-project-demo/tree/main/wx-ad-test-game
 
 https://github.com/tinlee/1000-project-demo/tree/main/vue3-add-and-subtract-method-within-10
 
+# 项目 4: 用 nextjs 给掘金的读者发制作徽章墙
+
+https://github.com/tinlee/1000-project-demo/tree/main/nextjs-juejin-badge
+
 ## 更多具体内容请查看公众号: cssandjs
 
 ![image.jpg](https://github.com/tinlee/1000-project-demo/blob/main/qrcode.jpg)
