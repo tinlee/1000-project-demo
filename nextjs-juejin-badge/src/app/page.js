@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import styles from "./page.module.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -27,7 +26,7 @@ export default function Home() {
                   .join("@")}
               </div>
             </div>
-            <div className={styles.badge}>
+            <div className={styles.badges}>
               {item.badges.map((bg, ind) => {
                 return (
                   <div key={ind} className={styles.badgesItem}>
