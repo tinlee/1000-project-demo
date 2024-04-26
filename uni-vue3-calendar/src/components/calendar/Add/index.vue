@@ -55,7 +55,7 @@
 
             </uniForm>
         </view>
-        <view class="delete" @click="onDelete">删除日程</view>
+        <view v-if="store.editInfo?.data" class="delete" @click="onDelete">删除日程</view>
 
     </uni-transition>
 
