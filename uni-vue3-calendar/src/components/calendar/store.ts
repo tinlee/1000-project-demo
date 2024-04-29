@@ -3,10 +3,9 @@ import dayjs from "dayjs";
 export const userCalendar = defineStore("calendar", {
   state: () => ({
     viewStatus: "month",
-    month: new Date(),
     day: new Date(),
     list: {
-      "2024-04-15": {
+      "2024-05-15": {
         "10:00-12:00": [
           {
             title: "Meeting",
@@ -26,16 +25,13 @@ export const userCalendar = defineStore("calendar", {
         ],
       },
     },
-    removeList: {},
     editInfo: null,
   }),
   actions: {
     goPreMonth() {
-      this.month = dayjs(this.month).subtract(1, "month").toDate();
       this.day = dayjs(this.day).subtract(1, "month").toDate();
     },
     goNextMonth() {
-      this.month = dayjs(this.month).add(1, "month").toDate();
       this.day = dayjs(this.day).add(1, "month").toDate();
     },
     changeEditInfo(data: any, index: number) {
@@ -45,7 +41,6 @@ export const userCalendar = defineStore("calendar", {
       };
     },
     goToday() {
-      this.month = new Date();
       this.day = new Date();
     },
     goDay({ date }) {
@@ -59,12 +54,10 @@ export const userCalendar = defineStore("calendar", {
     goNextWeek() {
       const day = dayjs(this.day).add(7, "day").toDate();
       this.day = day;
-      this.month = day;
     },
     goPreWeek() {
       const day = dayjs(this.day).subtract(7, "day").toDate();
       this.day = day;
-      this.month = day;
     },
     addList(list: any) {
       const { date, startTime, endTime } = list;

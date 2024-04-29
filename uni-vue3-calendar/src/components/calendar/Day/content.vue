@@ -28,7 +28,7 @@ function getTop(time, isEnd = false) {
 
 const store = userCalendar()
 const dateList = computed(() => {
-    const { list, month, day } = store
+    const { list, day } = store
     const dayText = dayjs(day).format('YYYY-MM-DD')
     const dateList = list[dayText]
     return Object.keys(dateList).map(key => {

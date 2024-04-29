@@ -38,7 +38,7 @@ const render = computed(() => {
 .day-list {
     display: flex;
     justify-content: space-between;
-    padding: 0 32rpx;
+    padding: 8rpx 32rpx;
     font-size: 24rpx;
     color: #333;
     padding: 0 16rpx;

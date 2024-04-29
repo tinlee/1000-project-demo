@@ -22,7 +22,6 @@
 
 <script setup lang="ts">
 import uniIcons from '@dcloudio/uni-ui/lib/uni-icons/uni-icons.vue';
-import Add from '../Add/index.vue'
 import { userCalendar } from '../store'
 import dayjs from 'dayjs';
 import { computed, inject, ref } from 'vue';
@@ -31,7 +30,7 @@ import dayList from './dayList.vue'
 const store = userCalendar();
 const share = ref()
 const monthText = computed(() => {
-    return dayjs(store.month).format('YYYY年MM月')
+    return dayjs(store.day).format('YYYY年MM月')
 })
 const addRef = inject('addRef')
 
@@ -79,7 +78,7 @@ function back() {
 .week-list {
     display: flex;
     justify-content: space-between;
-    padding: 0 16rpx;
+    padding: 8rpx 16rpx;
     font-size: 20rpx;
     color: #333;
 

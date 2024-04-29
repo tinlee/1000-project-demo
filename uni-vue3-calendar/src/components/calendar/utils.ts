@@ -4,7 +4,6 @@ export type CurrentDate = {
   date: dayjs.Dayjs;
   showDate: number;
   isCurrtentMonth?: boolean;
-  timeStamp: number;
   isToday: boolean;
   formatDate: string;
 };
@@ -23,7 +22,6 @@ export function getMonthDays(
     const currentDate = fistDay.add(i, "day");
     days[Math.floor(i / 7)].push({
       date: currentDate,
-      timeStamp: currentDate.valueOf(),
       showDate: currentDate.date(),
       formatDate: currentDate.format("YYYY-MM-DD"),
       isCurrtentMonth: currentDate.month() === dateObj.month(),
