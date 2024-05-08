@@ -10,13 +10,17 @@ https://github.com/tinlee/1000-project-demo/tree/main/node-excel-import-and-expo
 
 https://github.com/tinlee/1000-project-demo/tree/main/wx-ad-test-game
 
-# 项目 3: 父爱如山-用 vue3 给女儿做做个 10 以内加减法练习工具--3/1000
+# 项目 3: 父爱如山-用 vue3 给女儿做做个 10 以内加减法练习工具
 
 https://github.com/tinlee/1000-project-demo/tree/main/vue3-add-and-subtract-method-within-10
 
 # 项目 4: 用 nextjs 给掘金的读者发制作徽章墙
 
 https://github.com/tinlee/1000-project-demo/tree/main/nextjs-juejin-badge
+
+# 项目 5: 面试题要求用 vue3+uniapp 写一个日程组件？
+
+https://github.com/tinlee/1000-project-demo/tree/main/vue3-add-and-subtract-method-within-10
 
 ## 更多具体内容请查看公众号: cssandjs
 

@@ -10,11 +10,6 @@
 
 看着这些需求，鉴于我有限的审美能力，我决定还是抄借鉴一个吧。所以目光锁定了 ios 的系统日程表，审美在线。
 
-作者：天元 reborn
-链接：https://juejin.cn/post/7363108549592023103
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 具体内容请查看公众号: cssandjs
 
 ![image.jpg](https://github.com/tinlee/1000-project-demo/blob/main/qrcode.jpg)
