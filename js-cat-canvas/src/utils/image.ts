@@ -63,7 +63,7 @@ export function fillAndDraw({
   drawImage: (img: any) => void;
   borderImage?: string;
   color: string;
-}): Promise<void> {
+}): Promise<HTMLImageElement | null | void> {
   return fillColor(backGroundUrl, color)
     .then(drawImage)
     .then((img) => {

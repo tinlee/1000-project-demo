@@ -92,7 +92,7 @@ export class Cat {
     this.context = context;
     this.info = getBaseInfo();
   }
-
+  // 渲染主体
   draw() {
     this.drawTail()
       .then(() => this.darawFoot())
@@ -101,9 +101,11 @@ export class Cat {
       })
       .then(() => {
         this.drawFace();
-        // this.drawHand();
+        this.drawHand();
       });
   }
+
+  // 渲染尾巴
   drawTail() {
     const position: Position = [160, 574];
     return fillAndDraw({
@@ -113,6 +115,8 @@ export class Cat {
       borderImage: "./assets/img/base/tail-border.png",
     });
   }
+
+  // 加载图片并绘制
   loadAndDrawImage(
     src: string,
     position: Position,
@@ -126,38 +130,37 @@ export class Cat {
       return img;
     });
   }
+  // 绘制图片
   drawImage(position: Position, context?: CanvasRenderingContext2D) {
     return (img: CanvasImageSource) => {
       if (!img) return null;
       if (!context) {
         context = this.context;
       }
-      return context.drawImage(img, ...position);
+      context.drawImage(img, ...position);
+      return img;
     };
   }
+
+  // 绘制脚
   darawFoot() {
     return this.loadAndDrawImage("./assets/img/base/foot.png", [248, 772]).then(
-      (img) => {
-        return this.loadAndDrawImage(translateImage(img), [472, 772]);
-      }
+      (img) => this.loadAndDrawImage(translateImage(img), [472, 772])
     );
   }
-
+  // 绘制身体
   drawBody() {
-    const hairColor = this.info.hairColor;
-    const position: Position = [248, 534];
     return fillAndDraw({
       backGroundUrl: "./assets/img/base/body.png",
-      color: hairColor,
-      drawImage: this.drawImage(position),
+      color: this.info.skinColor,
+      drawImage: this.drawImage([248, 534]),
       borderImage: "./assets/img/base/body-border.png",
     });
   }
 
+  // 绘制脸
   drawFace() {
-    const skinColor = this.info.skinColor;
-    const hairColor = this.info.hairColor;
-    const side = this.info.side;
+    const { skinColor, hairColor, side, hasHair } = this.info;
 
     return fillColor("./assets/img/base/face-iouter.png", skinColor)
       .then((img: HTMLImageElement | null) => getFace(img, hairColor, side))
@@ -167,14 +170,15 @@ export class Cat {
         this.drawFacebeard()
           .then(() => this.drawMouth())
           .then(() => this.drawNouse());
-        this.info.hasHair && this.drawHair();
-        const side = this.info.side;
+
+        hasHair && this.drawHair();
         const isHairColor = side === 1 || side === 2;
         this.drawEar(isHairColor);
         this.drawEyes();
       });
   }
 
+  // 绘制脸的边框
   drawFaceBorder() {
     this.loadAndDrawImage(
       "./assets/img/base/face-iouter-border.png",
@@ -182,21 +186,24 @@ export class Cat {
     );
   }
 
+  // 绘制胡子
   drawFacebeard() {
     return this.loadAndDrawImage(
       "./assets/img/base/beard.png",
       [535, 398]
-    ).then((img) => {
-      return this.loadAndDrawImage(translateImage(img), [98, 398]);
-    });
+    ).then((img) => this.loadAndDrawImage(translateImage(img), [98, 398]));
   }
+  // 绘制嘴巴
   drawMouth() {
     return this.loadAndDrawImage("./assets/img/base/mouth.png", [373, 452]);
   }
 
+  // 绘制鼻子
+
   drawNouse() {
     this.loadAndDrawImage("./assets/img/base/nouse.png", [400, 420]);
   }
+  // 绘制头发
   drawHair() {
     fillAndDraw({
       backGroundUrl: "./assets/img/base/hair.png",
@@ -206,32 +213,31 @@ export class Cat {
     });
   }
 
+  // 绘制耳朵
   drawEar(isHairColor: boolean) {
     const { hairColor, skinColor, earShadowColor } = this.info;
     const color = isHairColor ? hairColor : skinColor;
     const context = this.getCanvasContext(true);
-    context.canvas.width = 600;
-    context.canvas.height = 800;
 
     fillAndDraw({
       backGroundUrl: "./assets/img/base/ear.png",
       color: color,
       drawImage: this.drawImage([0, 0], context),
     })
-      .then((img) => {
-        return fillAndDraw({
+      .then(() =>
+        fillAndDraw({
           backGroundUrl: "./assets/img/base/ear-shadow.png",
           color: earShadowColor,
           drawImage: this.drawImage([85, 60], context),
-        });
-      })
-      .then(() => {
-        return this.loadAndDrawImage(
+        })
+      )
+      .then(() =>
+        this.loadAndDrawImage(
           "./assets/img/base/ear-border.png",
           [0, 0],
           context
-        );
-      })
+        )
+      )
       .then(() => {
         const imgData = context.canvas.toDataURL();
         this.loadAndDrawImage(imgData, [480, 100]);
@@ -240,20 +246,38 @@ export class Cat {
         });
       });
   }
+  // 获取画布上下文
   getCanvasContext(vitual?: boolean) {
     if (!vitual) {
       return this.context;
     } else {
       const canvas = document.createElement("canvas");
       const context = canvas.getContext("2d") as CanvasRenderingContext2D;
+      context.canvas.width = 600;
+      context.canvas.height = 800;
       return context;
     }
   }
+
+  // 绘制眼睛
   drawEyes() {
     this.loadAndDrawImage("./assets/img/base/eye.png", [270, 338]).then(
       (img) => {
         this.loadAndDrawImage(translateImage(img), [484, 338]);
       }
     );
+  }
+
+  // 绘制手
+  drawHand() {
+    fillAndDraw({
+      backGroundUrl: "./assets/img/base/hand.png",
+      color: this.info.skinColor,
+      drawImage: this.drawImage([315, 630]),
+      borderImage: "./assets/img/base/hand-border.png",
+    }).then((img) => {
+      if (!img) return;
+      this.loadAndDrawImage(translateImage(img), [445, 630]);
+    });
   }
 }
