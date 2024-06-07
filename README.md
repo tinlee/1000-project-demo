@@ -22,6 +22,10 @@ https://github.com/tinlee/1000-project-demo/tree/main/nextjs-juejin-badge
 
 https://github.com/tinlee/1000-project-demo/tree/main/vue3-add-and-subtract-method-within-10
 
+# 项目 6: 使用原生 js/canvas 给女儿画点小猫
+
+https://github.com/tinlee/1000-project-demo/tree/main/js-cat-canvas
+
 ## 更多具体内容请查看公众号: cssandjs
 
 ![image.jpg](https://github.com/tinlee/1000-project-demo/blob/main/qrcode.jpg)
